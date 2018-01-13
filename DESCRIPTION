@@ -1,12 +1,11 @@
 Package: FastFLS
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Time-Varying linear regression via flexible least squares
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Gediminas Bagdonas
+Maintainer: Gediminas Bagdonas <gediminas@bagdonas.me>
+Description: A R/C++ implementation of algorithm proposed in "Time-varying linear regression via flexible least squares" by R. Kalaba and L. Tesfatsion.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 0.12.13)
