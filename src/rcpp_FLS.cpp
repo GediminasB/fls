@@ -2,7 +2,20 @@
 #include <RcppArmadillo.h>
 using namespace Rcpp;
 
-// [[Rcpp::export]]
+//' FLS fit
+//'
+//' This function is used to fit Time-Varying Linear Regression via Flexible least squares (FLS) as discribed in R. Kalaba and L. Tesfatsion (1989).
+//'
+//' @param X design matrix of dimensuin \eqn{n * K}.
+//' @param y vector of observations of length \eqn{n}.
+//' @param mu parameter controling relative weight of sum of dynamic errors (\eqn{r_D^2}) vs sums of squared residual measurement errors (\eqn{r_M^2}).
+//' @param smooth logical. If TRUE, a smoothed estimate is provided.
+//' @return A \eqn{n * K} matrix coefficient estimates.
+//' @references{
+//'   \insertRef{KALABA19891215}{FastFLS}
+//' }
+//' @export
+// [[Rcpp::export(fls.fit)]]
 arma::mat rcpp_FLS(arma::mat X, arma::vec y, double mu, bool smooth = false) {
   int K = X.n_cols;
   int n = X.n_rows;

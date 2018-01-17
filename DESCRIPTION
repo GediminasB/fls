@@ -8,6 +8,7 @@ Description: A R/C++ implementation of algorithm proposed in "Time-varying linea
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: Rcpp (>= 0.12.13)
+Imports: Rcpp (>= 0.12.13), Rdpack
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.0.1
+RdMacros: Rdpack
