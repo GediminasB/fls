@@ -9,7 +9,7 @@ A R/C++ implementation of Time-Varying linear regression via flexible least squa
 Installation
 ------------
 
-Until accepted to CRAN package can be installed using devtools, e.g.
+Until accepted to CRAN package can be installed using devtools, i.e.
 
 ``` r
 library(devtools)

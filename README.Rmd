@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 A R/C++ implementation of Time-Varying linear regression via flexible least squares as proposed in @KALABA19891215.
 
 ## Installation
-Until accepted to CRAN package can be installed using devtools, e.g.
+Until accepted to CRAN package can be installed using devtools, i.e.
 
 ```{r eval = FALSE}
 library(devtools)
