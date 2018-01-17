@@ -12,7 +12,7 @@ using namespace Rcpp;
 //' @param smooth logical. If TRUE, a smoothed estimate is provided.
 //' @return A \eqn{n * K} matrix coefficient estimates.
 //' @references{
-//'   \insertRef{KALABA19891215}{FastFLS}
+//'   \insertRef{KALABA19891215}{fls}
 //' }
 //' @export
 // [[Rcpp::export(fls.fit)]]

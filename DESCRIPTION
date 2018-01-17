@@ -1,4 +1,4 @@
-Package: FastFLS
+Package: fls
 Type: Package
 Title: Time-Varying linear regression via flexible least squares
 Version: 0.1.0

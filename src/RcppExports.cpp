@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // rcpp_FLS
 arma::mat rcpp_FLS(arma::mat X, arma::vec y, double mu, bool smooth);
-RcppExport SEXP _FastFLS_rcpp_FLS(SEXP XSEXP, SEXP ySEXP, SEXP muSEXP, SEXP smoothSEXP) {
+RcppExport SEXP _fls_rcpp_FLS(SEXP XSEXP, SEXP ySEXP, SEXP muSEXP, SEXP smoothSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -22,11 +22,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_FastFLS_rcpp_FLS", (DL_FUNC) &_FastFLS_rcpp_FLS, 4},
+    {"_fls_rcpp_FLS", (DL_FUNC) &_fls_rcpp_FLS, 4},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_FastFLS(DllInfo *dll) {
+RcppExport void R_init_fls(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
