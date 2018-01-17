@@ -34,8 +34,13 @@ fls = function(X, y, mu = 1, smooth = TRUE) {
 
   structure(
     list(
+      X = X,
+      y = y,
+      mu = mu,
+      smooth = smooth,
       coefficients = B,
       fitted.values = y.hat,
+      residualss = y - y.hat,
       r_D = r_D,
       r_M = r_M
     ), class = "fls"
@@ -60,4 +65,9 @@ print.fls = function(x, ...) {
   cat("\n")
   cat("Sum of squared errors:\n")
   print(c(`r_D` = x$r_D, `r_M` = x$r_M))
+}
+
+#' @export
+coef.fls = function(object, ...) {
+  object$coefficients
 }
