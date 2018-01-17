@@ -42,13 +42,13 @@ fls = function(X, y, mu = 1, smooth = TRUE) {
   )
 }
 #' @export
-print.fls = function(x) {
+print.fls = function(x, ...) {
   n = nrow(x$coefficients)
   cat("Coefficients:\n")
   if(n <=  10) {
     print(x$coefficients)
   } else {
-    Coef = rbind(round(head(x$coefficients, 5),3), rep("...", ncol(x$coefficients)), round(tail(x$coefficients, 5), 3))
+    Coef = rbind(round(utils::head(x$coefficients, 5),3), rep("...", ncol(x$coefficients)), round(utils::tail(x$coefficients, 5), 3))
     if(is.null(rownames(x$coefficients))) {
       row.names(Coef) = rep("", 11)
     }
