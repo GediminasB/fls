@@ -4,7 +4,7 @@ Title: Time-Varying linear regression via flexible least squares
 Version: 0.1.0
 Author: Gediminas Bagdonas
 Maintainer: Gediminas Bagdonas <gediminas@bagdonas.me>
-Description: A R/C++ implementation of algorithm proposed in "Time-varying linear regression via flexible least squares" by R. Kalaba and L. Tesfatsion.
+Description: A R/C++ implementation of algorithm proposed in R. Kalaba and L. Tesfatsion (1989).
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
