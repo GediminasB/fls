@@ -12,13 +12,49 @@
 #' @param y vector of observations of length \eqn{n}.
 #' @param mu parameter controling relative weight of sum of dynamic errors (\eqn{r_D^2}) vs sums of squared residual measurement errors (\eqn{r_M^2}).
 #' @param smooth logical. If TRUE, a smoothed estimate is provided.
-#' @return A \eqn{n * K} matrix coefficient estimates.
+#' @return Returns object of class "fls". An object of class "fls" is a list containing the following components:
+#' \describe{
+#'   \item{coefficients}{A \eqn{n * K} matrix coefficient estimates.}
+#'   \item{fitted.values}{the fitted mean values.}
+#'   \item{r_D}{sum of dynamic errors.}
+#'   \item{r_M}{sums of squared residual measurement errors.}
+#' }
 #'
 #' @references{
 #'   \insertRef{KALABA19891215}{fls}
 #' }
 #' @export
 fls = function(X, y, mu = 1, smooth = TRUE) {
+  B = fls.fit(X, y, mu, smooth)
+  rownames(B) = rownames(X)
+  colnames(B) = colnames(X)
+  y.hat = rowSums(X * B)
+  r_D = sum(diff(B)^2)
+  r_M = sum((y - y.hat)^2)
 
+  structure(
+    list(
+      coefficients = B,
+      fitted.values = y.hat,
+      r_D = r_D,
+      r_M = r_M
+    ), class = "fls"
+  )
 }
-
+#' @export
+print.fls = function(x) {
+  n = nrow(x$coefficients)
+  cat("Coefficients:\n")
+  if(n <=  10) {
+    print(x$coefficients)
+  } else {
+    Coef = rbind(round(head(x$coefficients, 5),3), rep("...", ncol(x$coefficients)), round(tail(x$coefficients, 5), 3))
+    if(is.null(rownames(x$coefficients))) {
+      row.names(Coef) = rep("", 11)
+    }
+    print(Coef, quote = FALSE)
+  }
+  cat("\n")
+  cat("Sum of squared errors:\n")
+  print(c(`r_D` = x$r_D, `r_M` = x$r_M))
+}
