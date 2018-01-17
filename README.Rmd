@@ -17,11 +17,14 @@ knitr::opts_chunk$set(
 
 # Time-Varying linear regression via flexible least squares
 
-A R/C++ implementation of Time-Varying linear regression via flexible least squares as proposed in {@KALABA19891215}.
+A R/C++ implementation of Time-Varying linear regression via flexible least squares as proposed in @KALABA19891215.
 
+## Installation
 Until accepted to CRAN package can be installed using devtools, e.g.
 
 ```{r eval = FALSE}
 library(devtools)
 install_github("GediminasB/fls")
 ```
+
+## References
