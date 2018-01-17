@@ -1,3 +1,2 @@
-exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp, evalCpp)
 useDynLib(FastFLS, .registration = TRUE)
