@@ -2,6 +2,8 @@
 Time-Varying linear regression via flexible least squares
 =========================================================
 
+[![Build Status](https://travis-ci.org/GediminasB/fls.svg?branch=master)](https://travis-ci.org/GediminasB/fls)
+
 A R/C++ implementation of Time-Varying linear regression via flexible least squares as proposed in Kalaba and Tesfatsion (1989).
 
 Installation
