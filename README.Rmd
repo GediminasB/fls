@@ -2,6 +2,7 @@
 output:
   md_document:
     variant: markdown_github
+bibliography: inst/REFERENCES.bib
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -16,8 +17,11 @@ knitr::opts_chunk$set(
 
 # Time-Varying linear regression via flexible least squares
 
-A R/C++ implementation of algorithm proposed in R. Kalaba and L. Tesfatsion (1989).
+A R/C++ implementation of Time-Varying linear regression via flexible least squares as proposed in {@KALABA19891215}.
 
-```{r example}
-## basic example code
+Until accepted to CRAN package can be installed using devtools, e.g.
+
+```{r eval = FALSE}
+library(devtools)
+install_github("GediminasB/fls")
 ```
