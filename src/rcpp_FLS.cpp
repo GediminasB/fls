@@ -30,15 +30,15 @@ arma::mat rcpp_FLS(arma::mat X, arma::vec y, double mu, bool smooth = false) {
   for(int i = 0; i < n; i++) {
     arma::vec p_ = p + X.row(i).t() * y(i);
     arma::mat Q_ = Q + X.row(i).t() * X.row(i);
-
-    if(i >= K) {
-      B.row(i) = p_.t() * arma::inv_sympd(Q_);
-    }
-
+    // One step update
     M.slice(i) = mu * arma::inv_sympd(Q_ + mu*I);
     Q = mu * (I - M.slice(i));
     p = M.slice(i) * p_;
     E.row(i) = 1/mu * p.t();
+    // Beta estimate
+    if(i == n-1) {
+      B.row(i) = p_.t() * arma::inv_sympd(Q_);
+    }
   }
   if(smooth) {
     for(int i = n-2; i >= 0; i--) {
