@@ -55,7 +55,7 @@ print.fls = function(x, ...) {
     if(n <=  10) Coef = round(x$coefficients,3)
     else Coef = rbind(round(utils::head(x$coefficients, 5),3), rep("...", ncol(x$coefficients)), round(utils::tail(x$coefficients, 5), 3))
   } else {
-    Coef = tail(round(x$coefficients,3), 1)
+    Coef = utils::tail(round(x$coefficients,3), 1)
   }
 
   if(is.null(rownames(x$coefficients))) {
