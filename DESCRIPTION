@@ -12,3 +12,4 @@ Imports: Rcpp (>= 0.12.13), Rdpack
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.0.1
 RdMacros: Rdpack
+Suggests: testthat
