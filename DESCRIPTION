@@ -1,7 +1,7 @@
 Package: fls
 Type: Package
 Title: Time-Varying linear regression via flexible least squares
-Version: 0.1.0
+Version: 0.1.1.9000
 Author: Gediminas Bagdonas
 Maintainer: Gediminas Bagdonas <gediminas@bagdonas.me>
 Description: A R/C++ implementation of algorithm proposed in R. Kalaba and L. Tesfatsion (1989).
