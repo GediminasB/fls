@@ -58,7 +58,7 @@ print.fls = function(x, ...) {
   }
 
   if(is.null(rownames(x$coefficients))) {
-    row.names(Coef) = rep("", 11)
+    row.names(Coef) = rep("", min(n, 11))
   }
 
   print(Coef, quote = FALSE)
