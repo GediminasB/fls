@@ -51,20 +51,24 @@ print.fls = function(x, ...) {
   n = nrow(x$coefficients)
   cat("Coefficients:\n")
 
-  if(n <=  10) {
-    Coef = round(x$coefficients,3)
+  if(x$smooth) {
+    if(n <=  10) Coef = round(x$coefficients,3)
+    else Coef = rbind(round(utils::head(x$coefficients, 5),3), rep("...", ncol(x$coefficients)), round(utils::tail(x$coefficients, 5), 3))
   } else {
-    Coef = rbind(round(utils::head(x$coefficients, 5),3), rep("...", ncol(x$coefficients)), round(utils::tail(x$coefficients, 5), 3))
+    Coef = tail(round(x$coefficients,3), 1)
   }
 
   if(is.null(rownames(x$coefficients))) {
-    row.names(Coef) = rep("", min(n, 11))
+    row.names(Coef) = rep("", nrow(Coef))
   }
 
   print(Coef, quote = FALSE)
-  cat("\n")
-  cat("Sum of squared errors:\n")
-  print(c(`r_D` = x$r_D, `r_M` = x$r_M))
+
+  if(x$smooth) {
+    cat("\n")
+    cat("Sum of squared errors:\n")
+    print(c(`r_D` = x$r_D, `r_M` = x$r_M))
+  }
 }
 
 #' @export
