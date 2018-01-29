@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 # Time-Varying linear regression via flexible least squares
 
 [![Build Status](https://travis-ci.org/GediminasB/fls.svg?branch=master)](https://travis-ci.org/GediminasB/fls)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/GediminasB/fls?branch=master&svg=true)](https://ci.appveyor.com/project/GediminasB/fls)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/fls)](http://cran.r-project.org/package=fls)
 [![codecov](https://codecov.io/gh/GediminasB/fls/branch/master/graph/badge.svg)](https://codecov.io/gh/GediminasB/fls)
 
