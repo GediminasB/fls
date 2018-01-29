@@ -1,7 +1,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^.travis\.yml$
+^\.travis\.yml$
+^/\.gitattributes$
 ^README\.Rmd$
 ^README-.*\.png$
 ^NEWS\.md$
 ^appveyor\.yml$
+^codecov\.yml$
