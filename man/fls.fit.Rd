@@ -22,7 +22,5 @@ A \eqn{n * K} matrix coefficient estimates.
 This function is used to fit Time-Varying Linear Regression via Flexible least squares (FLS) as discribed in R. Kalaba and L. Tesfatsion (1989).
 }
 \references{
-{
-  \insertRef{KALABA19891215}{fls}
-}
+\insertRef{KALABA19891215}{fls}
 }

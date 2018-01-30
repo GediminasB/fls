@@ -6,10 +6,14 @@ Author: Gediminas Bagdonas
 Maintainer: Gediminas Bagdonas <gediminas@bagdonas.me>
 Description: A R/C++ implementation of algorithm proposed in R. Kalaba and L. Tesfatsion (1989).
 License: GPL-3 | file LICENSE
+BugReports: https://github.com/gediminasb/fls/issues
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 3.1.2)
 Imports: Rcpp (>= 0.12.13), Rdpack
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.0.1
-RdMacros: Rdpack
+Roxygen: list(markdown = TRUE)
 Suggests: testthat
+RdMacros: Rdpack

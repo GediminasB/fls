@@ -10,9 +10,9 @@
 #' @param mu parameter controling relative weight of sum of dynamic errors (\eqn{r_D^2}) vs sums of squared residual measurement errors (\eqn{r_M^2}).
 #' @param smooth logical. If TRUE, a smoothed estimate is provided.
 #' @return A \eqn{n * K} matrix coefficient estimates.
-#' @references{
-#'   \insertRef{KALABA19891215}{fls}
-#' }
+#' @references
+#' \insertRef{KALABA19891215}{fls}
+#'
 #' @export
 fls.fit <- function(X, y, mu, smooth = FALSE) {
     .Call(`_fls_rcpp_FLS`, X, y, mu, smooth)

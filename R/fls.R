@@ -20,9 +20,9 @@
 #'   \item{r_M}{sum of squared residual measurement errors.}
 #' }
 #'
-#' @references{
-#'   \insertRef{KALABA19891215}{fls}
-#' }
+#' @references
+#' \insertRef{KALABA19891215}{fls}
+#'
 #' @export
 fls = function(X, y, mu = 1, smooth = TRUE) {
   B = fls.fit(X, y, mu, smooth)
