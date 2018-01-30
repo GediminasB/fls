@@ -1,6 +1,6 @@
 Package: fls
 Type: Package
-Title: Time-Varying linear regression via flexible least squares
+Title: Time-Varying Linear Regression via Flexible Least Squares
 Version: 0.1.1.9000
 Author: Gediminas Bagdonas
 Maintainer: Gediminas Bagdonas <gediminas@bagdonas.me>
