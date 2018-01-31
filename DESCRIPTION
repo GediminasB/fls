@@ -1,7 +1,7 @@
 Package: fls
 Type: Package
 Title: Time-Varying Linear Regression via Flexible Least Squares
-Version: 0.1.1.9000
+Version: 0.1.1
 Author: Gediminas Bagdonas
 Maintainer: Gediminas Bagdonas <gediminas@bagdonas.me>
 Description: A R/C++ implementation of algorithm proposed in R. Kalaba and L. Tesfatsion (1989).
@@ -10,7 +10,7 @@ BugReports: https://github.com/gediminasb/fls/issues
 Encoding: UTF-8
 LazyData: true
 Depends: 
-    R (>= 3.1.2)
+    R (>= 3.3.0)
 Imports: Rcpp (>= 0.12.13), Rdpack
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.0.1

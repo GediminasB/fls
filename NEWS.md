@@ -1,4 +1,6 @@
-# 0.1.1.9000 - 2018-01-18
+# 0.1.1 - 2018-01-31
+Package submitted to CRAN.
+
 ### Added
 - Added some unit tests for main function (`fls`).
 
@@ -9,4 +11,4 @@
 
 # 0.1.0 - 2018-01-17
 ### Added
-- Initial version submitted to CRAN.
+- Initial version.
